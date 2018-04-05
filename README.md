@@ -1,0 +1,1 @@
+# Legato-Asset-Data-sample
