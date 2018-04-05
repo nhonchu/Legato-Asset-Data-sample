@@ -1,0 +1,38 @@
+sandboxed: false
+executables:
+{
+    fridgeTruck = ( truck_component )
+}
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+    run:
+    {
+        (fridgeTruck)
+    }
+}
+bindings:
+{
+    fridgeTruck.truck_component.le_avdata -> avcService.le_avdata
+    fridgeTruck.truck_component.le_pos -> positioningService.le_pos
+    fridgeTruck.truck_component.le_posCtrl -> positioningService.le_posCtrl
+
+    fridgeTruck.truck_component.le_gpioPin13 -> gpioService.le_gpioPin13
+    fridgeTruck.truck_component.le_gpioPin42 -> gpioService.le_gpioPin42
+    fridgeTruck.truck_component.le_gpioPin33 -> gpioService.le_gpioPin33
+    fridgeTruck.truck_component.le_gpioPin7 -> gpioService.le_gpioPin7
+    fridgeTruck.truck_component.le_gpioPin8 -> gpioService.le_gpioPin8
+}
+requires:
+{
+    configTree:
+    {
+        [w] .       // I need write access to my configuration data.
+    }
+}
+
+start: auto
+version: 1.1
