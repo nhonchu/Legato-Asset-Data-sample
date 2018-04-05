@@ -53,8 +53,10 @@ Create an update package & Generate package for upload to AirVantage
 Do the following only Once:
 ~~~
 av-pack -u fridgetTruck.wp76xx.update -b _build_fridgeTruck/wp76xx/ -t <TypeName>
-	where <TypeName> shall be globally unique (e.g. WP76_LE1802_YourNAME_FridgeTruck). AirVantage uses it to uniquely identify multiple versions of this application
 ~~~
+
+where <TypeName> shall be globally unique (e.g. WP76_LE1802_YourNAME_FridgeTruck). AirVantage uses it to uniquely identify multiple versions of this application
+
 
 The above commands will create a zip file containing an *update package* and a *manifest xml file* (manifest.app).
 
