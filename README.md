@@ -31,8 +31,8 @@ The implemented scenario is described in the header of fridgeTruck.c.
 This application is making use of :
 * [le_avdata](http://legato.io/legato-docs/latest/le__avdata__interface_8h.html) (Legato asset data API) to send single data point and Timeseries to AirVantage. The app can handle AirVantage requests (change settings, execute commands)
 * [le_cfg](http://legato.io/legato-docs/latest/le__cfg__interface_8h.html) (Legato config tree API) to persist some settings in the config tree
-* [position helper library]() (wrapping Legato's positioning service: le_pos and le_posCtrl) to push the current geolocation of the device to AirVantage
-* [gpio helper library]() (wrapping Legato's le_gpio service) to provide visual feedback on the AC Fan (motor) and the truck door status (LED). A switch (push button) is also implemented to open/close truck door. The motor, LED and push button are wired to a [IoT expansion card](https://mangoh.io/iot-cards) and plugged into IoT slot0 of a [mangOH board](https://mangoh.io) (Red or Green). Transistor should be used to drive motor and LED.
+* [position helper library](https://github.com/nhonchu/Legato-Positioning-sample) (wrapping Legato's positioning service: le_pos and le_posCtrl) to push the current geolocation of the device to AirVantage
+* [gpio helper library](https://github.com/nhonchu/Legato-GPIO-sample) (wrapping Legato's le_gpio service) to provide visual feedback on the AC Fan (motor) and the truck door status (LED). A switch (push button) is also implemented to open/close truck door. The motor, LED and push button are wired to a [IoT expansion card](https://mangoh.io/iot-cards) and plugged into IoT slot0 of a [mangOH board](https://mangoh.io) (Red or Green). Transistor should be used to drive motor and LED.
 
 Build
 -----
